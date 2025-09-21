@@ -12,8 +12,13 @@ const GRID_ROWS = 12;          // yükseklik
 const CELL = 12;               // piksel boyu
 const GAP = 2;                 // hücre aralığı
 const MARGIN = 16;             // kenar boşluk
-const STEP_MS = 50;            // her kare kaç ms (hız)
-const SNAKE_FLASH_MS = 120;    // mor vurgunun süresi
+
+// HIZ & YILAN UZUNLUĞU
+const STEP_MS = 180;           // her kare kaç ms (daha yavaş = daha büyük)
+const SNAKE_SEGMENT = 5;       // yılanın belirgin mor uzunluğu (hücre sayısı)
+const SNAKE_FLASH_MS = STEP_MS * SNAKE_SEGMENT; // 5 segment boyunca mor kalsın
+
+// RENKLER
 const BG = "#0f172a";          // arka plan (slate-900 gibi)
 const DOT_BG = "#0b1220";      // yenmiş kare rengi (daha koyu)
 const DOT1 = "#86efac";        // açık yeşil
@@ -132,7 +137,7 @@ function cellY(row) {
 function pickDotColor(col, row, textMask) {
   // Harfler koyu tonda dursun
   if (textMask[row][col]) return TEXT_COLOR;
-  // Diğer kareler 4 seviyeden rastgele/tekrarlı dağıtım
+  // Diğer kareler 4 seviyeden tekrarlı dağıtım
   const mix = (col * 131 + row * 29) % 4;
   return [DOT1, DOT2, DOT3, DOT4][mix];
 }
@@ -140,14 +145,13 @@ function pickDotColor(col, row, textMask) {
 function buildEatOrder(textMask) {
   const nonText = [];
   const text = [];
-  // “Önce çevre yemleri, sonra yazı” için: dıştan içe tarama
-  // Basitçe: satır satır tarayıp önce text=false olanları sıraya koy, sonra text=true olanlar.
+  // “Önce çevre yemleri, sonra yazı”
   for (let r = 0; r < GRID_ROWS; r++) {
     for (let c = 0; c < GRID_COLS; c++) {
       (textMask[r][c] ? text : nonText).push({ r, c });
     }
   }
-  // Non-text’i serpme bir görünüm için “yılan izi” hissi: sağ-sol kırpma düzeni
+  // Non-text’i serpme bir görünüm için sağ-sol kırpma düzeni
   const serp = [];
   for (let r = 0; r < GRID_ROWS; r++) {
     const rowCells = nonText.filter(k => k.r === r);
@@ -158,7 +162,6 @@ function buildEatOrder(textMask) {
   const letters = [];
   for (let r = 0; r < GRID_ROWS; r++) {
     const rowCells = text.filter(k => k.r === r);
-    // Yine serp yapısı
     if (r % 2 === 0) rowCells.sort((a, b) => a.c - b.c);
     else rowCells.sort((a, b) => b.c - a.c);
     letters.push(...rowCells);
@@ -178,6 +181,17 @@ function generateSVG() {
   const barW = W - MARGIN * 2;
   const barH = 12;
 
+  // Tüm animasyon süresi
+  const totalDur = totalSteps * STEP_MS + SNAKE_FLASH_MS + 200;
+
+  // LOOP için görünmez master timeline (her şey buna bağlanır)
+  const timeline = `
+    <rect x="-10" y="-10" width="1" height="1" fill="none" opacity="0">
+      <animate id="tl" attributeName="opacity" from="0" to="0"
+               dur="${totalDur}ms" begin="0s;tl.end" />
+    </rect>
+  `;
+
   let rects = "";
   // Tüm hücreleri çiz ve animasyon ekle
   for (let r = 0; r < GRID_ROWS; r++) {
@@ -191,12 +205,14 @@ function generateSVG() {
       const flashEnd = begin + SNAKE_FLASH_MS;
       const endFill = DOT_BG;
 
-      // İki aşama: mor -> koyu
+      // İki aşama: mor -> koyu, timeline'a bağla
       const animFlash = idx >= 0
-        ? `<animate attributeName="fill" values="${baseColor};${SNAKE_COLOR}" begin="${begin}ms" dur="${SNAKE_FLASH_MS}ms" fill="freeze" />`
+        ? `<animate attributeName="fill" values="${baseColor};${SNAKE_COLOR}"
+                    begin="tl.begin+${begin}ms" dur="${SNAKE_FLASH_MS}ms" fill="freeze" />`
         : "";
       const animDark = idx >= 0
-        ? `<animate attributeName="fill" values="${SNAKE_COLOR};${endFill}" begin="${flashEnd}ms" dur="${Math.max(1, STEP_MS)}ms" fill="freeze" />`
+        ? `<animate attributeName="fill" values="${SNAKE_COLOR};${endFill}"
+                    begin="tl.begin+${flashEnd}ms" dur="${Math.max(1, STEP_MS)}ms" fill="freeze" />`
         : "";
 
       rects += `<rect x="${x}" y="${y}" width="${CELL}" height="${CELL}" rx="2" ry="2" fill="${baseColor}">
@@ -205,18 +221,18 @@ function generateSVG() {
     }
   }
 
-  // Progress bar (genel zaman çizgisi)
-  const totalDur = totalSteps * STEP_MS + SNAKE_FLASH_MS + 200;
+  // Progress bar (genel zaman çizgisi) – o da loop yapsın
   const bar = `
     <rect x="${barX}" y="${barY}" width="${barW}" height="${barH}" fill="${BAR_BG}" rx="6" ry="6"/>
     <rect x="${barX}" y="${barY}" width="0" height="${barH}" fill="${BAR_FG}" rx="6" ry="6">
-      <animate attributeName="width" from="0" to="${barW}" dur="${totalDur}ms" fill="freeze"/>
+      <animate attributeName="width" from="0" to="${barW}" begin="tl.begin" dur="${totalDur}ms" fill="freeze"/>
     </rect>
   `;
 
   const svg = `
 <svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
   <rect width="100%" height="100%" fill="${BG}"/>
+  ${timeline}
   ${rects}
   ${bar}
 </svg>`;
