@@ -12,7 +12,7 @@ const GAP = 2;
 const MARGIN = 16;
 
 // Faz-1: yeme hızı ve yılan uzunluğu
-const STEP_MS = 60;                 // daha yavaş = daha büyük
+const STEP_MS = 50;                 // daha yavaş = daha büyük
 const SNAKE_SEGMENT = 5;
 const SNAKE_FLASH_MS = STEP_MS * SNAKE_SEGMENT;
 
