@@ -1,8 +1,8 @@
-# 👋 Hi, I’m ByDolor  
+# 👋 Hi, I’m ByDolor
 
-- 🚀 Oyun & Uygulama Geliştiricisiyim  
-- 🎨 UI/UX Tasarımcısıyım  
-- 🎵 Müzisyenim  
+- 🚀 Oyun & Uygulama Geliştiricisiyim
+- 🎨 UI/UX Tasarımcısıyım
+- 🎵 Müzisyenim
 
 ---
 
@@ -10,5 +10,4 @@
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ByDolor&show_icons=true&theme=radical)
 
 ### 🐍 Snake Oyunu
-![snake gif](https://github.com/ByDolor/ByDolor/blob/output/snake.svg)
-
+![snake](https://raw.githubusercontent.com/ByDolor/ByDolor/output/snake.svg)
