@@ -1,16 +1,14 @@
-## Hi there 👋
+# 👋 Hi, I’m ByDolor  
 
-<!--
-**ByDolor/ByDolor** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+- 🚀 Oyun & Uygulama Geliştiricisiyim  
+- 🎨 UI/UX Tasarımcısıyım  
+- 🎵 Müzisyenim  
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 📊 GitHub İstatistiklerim
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ByDolor&show_icons=true&theme=radical)
+
+### 🐍 Snake Oyunu
+![snake gif](https://github.com/ByDolor/ByDolor/blob/output/snake.svg)
+
