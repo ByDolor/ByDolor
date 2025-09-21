@@ -11,7 +11,7 @@ const CELL = 12;
 const GAP = 2;
 const MARGIN = 16;
 
-const STEP_MS = 180;            // adım süresi (yavaş/hızlı)
+const STEP_MS = 110;            // adım süresi (yavaş/hızlı)
 const SNAKE_SEGMENT = 5;        // mor segment uzunluğu
 const SNAKE_FLASH_MS = STEP_MS * SNAKE_SEGMENT;
 
@@ -27,7 +27,7 @@ const DOT4 = "#39d353";
 // “ByDolor” harfleri için daha koyu yeşil
 const TEXT_COLOR = "#003d1f";
 
-const SNAKE_COLOR = "#7e22ce";  // mor
+const SNAKE_COLOR = "#3e1142";  // mor
 const BAR_BG = "#134e4a";
 const BAR_FG = "#10b981";
 
