@@ -14,8 +14,8 @@ const GAP = 2;                 // hücre aralığı
 const MARGIN = 16;             // kenar boşluk
 
 // HIZ & YILAN UZUNLUĞU
-const STEP_MS = 180;           // her kare kaç ms (daha yavaş = daha büyük)
-const SNAKE_SEGMENT = 5;       // yılanın belirgin mor uzunluğu (hücre sayısı)
+const STEP_MS = 250;           // her kare kaç ms (daha yavaş = daha büyük)
+const SNAKE_SEGMENT = 8;       // yılanın belirgin mor uzunluğu (hücre sayısı)
 const SNAKE_FLASH_MS = STEP_MS * SNAKE_SEGMENT; // 5 segment boyunca mor kalsın
 
 // RENKLER
@@ -26,7 +26,7 @@ const DOT2 = "#22c55e";        // orta yeşil
 const DOT3 = "#16a34a";        // koyu yeşil
 const DOT4 = "#065f46";        // en koyu yeşil
 const TEXT_COLOR = DOT4;       // “ByDolor” yazısının tonu
-const SNAKE_COLOR = "#7e22ce"; // mor vurgulama
+const SNAKE_COLOR = "#3e1142"; // mor vurgulama
 const BAR_BG = "#134e4a";      // progress arka
 const BAR_FG = "#10b981";      // progress dolan
 
