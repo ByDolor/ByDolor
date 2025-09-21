@@ -11,7 +11,7 @@ const CELL = 12;
 const GAP = 2;
 const MARGIN = 16;
 
-const STEP_MS = 110;            // adım süresi (yavaş/hızlı)
+const STEP_MS = 70;            // adım süresi (yavaş/hızlı)
 const SNAKE_SEGMENT = 5;        // mor segment uzunluğu
 const SNAKE_FLASH_MS = STEP_MS * SNAKE_SEGMENT;
 
