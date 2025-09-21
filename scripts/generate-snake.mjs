@@ -150,12 +150,15 @@ function generateSVG() {
     </g>
   `;
 
-  // Faz-2: altta 5 mor blok birlikte sağa-sola gider (ping-pong), loop
+  // Faz-2: altta 5 mor blok – YALNIZCA FAZ-1 BİTİNCE görünür, sonra ping-pong loop
   const leftX = cellX(0);
   const rightX = cellX(GRID_COLS - 5); // 5'lik trenin sığacağı en sağ konum
   const yBottom = cellY(BOTTOM_ROW);
 
-  let phase2Snake = `<g transform="translate(0,0)">`;
+  let phase2Snake = `<g id="phase2-snake" opacity="0" transform="translate(0,0)">
+    <!-- Faz-1 bittiğinde görünür -->
+    <animate attributeName="opacity" from="0" to="1" begin="tl1.end" dur="1ms" fill="freeze"/>
+  `;
   // 5 ardışık blok (tren)
   for (let i=0;i<5;i++) {
     const bx = leftX + i * (CELL + GAP);
@@ -169,11 +172,8 @@ function generateSVG() {
                       begin="tl2.begin" dur="${PHASE2_DUR_MS}ms" repeatCount="indefinite"/>
   </g>`;
 
-  const Wsvg = MARGIN*2 + GRID_COLS*CELL + (GRID_COLS-1)*GAP;
-  const Hsvg = H;
-
   const svg = `
-<svg xmlns="http://www.w3.org/2000/svg" width="${Wsvg}" height="${Hsvg}" viewBox="0 0 ${Wsvg} ${Hsvg}">
+<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
   <rect width="100%" height="100%" fill="${BG}"/>
   ${timelines}
   ${rects}
