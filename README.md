@@ -7,7 +7,7 @@
 
 ---
 
-# 👋 Merhaba, ben Serhat Can (serhatcan44)
+# 👋 Merhaba, ben Serhat Can 
 
 🚀 **Oyun & Uygulama Geliştiricisi**  
 🎨 **UI/UX Tasarımcısı**  
@@ -38,8 +38,9 @@
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/serhatcan44/serhatcan44/output/snake.svg" alt="Snake Animation" />
+  <img src="https://raw.githubusercontent.com/serhatcan44/serhatcan44/output/snake.svg?v=2" alt="Snake Animation"/>
 </p>
+
 
 ---
 
