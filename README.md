@@ -1,13 +1,9 @@
+<!-- Banner -->
+
 <p align="center">
   <img src="./banner.svg" alt="Serhat Can - Oyun & Uygulama Geliştiricisi" width="100%" />
 </p>
 
-
-
-<!-- Banner -->
-<p align="center">
-  <img src="./banner.png" alt="Serhat Can - Oyun & Uygulama Geliştiricisi" />
-</p>
 
 ---
 
