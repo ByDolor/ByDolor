@@ -31,8 +31,8 @@
 
 ## 📊 GitHub İstatistiklerim
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ByDolor&show_icons=true&theme=tokyonight" alt="ByDolor Stats" height="160" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ByDolor&layout=compact&theme=tokyonight" alt="ByDolor Top Languages" height="160" />
+ <img src="https://github-readme-stats.vercel.app/api?username=ByDolor&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&v=2" />
+ <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ByDolor&layout=compact&theme=tokyonight&v=2" />
 </p>
 
 ---
