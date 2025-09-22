@@ -1,0 +1,269 @@
+<!-- Matrix Rain Banner - 1200x300 - 30 columns - text stays on top -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#07110c"/>
+      <stop offset="1" stop-color="#0b1220"/>
+    </linearGradient>
+
+    <!-- neon glow for title -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style><![CDATA[
+      .digit { font: 700 18px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .head  { fill:#39d353; }
+      .trail { fill:#0e4429; }
+    ]]></style>
+
+    <!-- tek bir sütunun içerdiği rakamlar (animasyon sütuna uygulanacak) -->
+    <g id="digits">
+      <text class="digit head"  x="0" y="0">5</text>
+      <text class="digit trail" x="0" y="22">7</text>
+      <text class="digit trail" x="0" y="44">3</text>
+      <text class="digit trail" x="0" y="66">1</text>
+      <text class="digit trail" x="0" y="88">9</text>
+      <text class="digit trail" x="0" y="110">0</text>
+      <text class="digit trail" x="0" y="132">8</text>
+      <text class="digit trail" x="0" y="154">6</text>
+      <text class="digit trail" x="0" y="176">2</text>
+      <text class="digit trail" x="0" y="198">4</text>
+      <text class="digit trail" x="0" y="220">7</text>
+      <text class="digit trail" x="0" y="242">3</text>
+    </g>
+  </defs>
+
+  <!-- arka plan -->
+  <rect width="1200" height="300" fill="url(#bg)"/>
+
+  <!-- MATRIX RAIN (metnin arkasında) -->
+  <g id="rain">
+    <!-- 30 sütun: x = 10 + i*40  (10..1170) -->
+    <!-- farklı hız (dur) ve başlangıç (begin) değerleriyle canlı akış -->
+    <!-- sütun 0 -->
+    <g transform="translate(10,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="6.2s" begin="-0.0s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 1 -->
+    <g transform="translate(50,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="7.0s" begin="-0.6s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 2 -->
+    <g transform="translate(90,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="6.6s" begin="-1.2s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 3 -->
+    <g transform="translate(130,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="7.6s" begin="-1.8s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 4 -->
+    <g transform="translate(170,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="5.8s" begin="-0.9s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 5 -->
+    <g transform="translate(210,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="6.9s" begin="-1.5s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 6 -->
+    <g transform="translate(250,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="6.3s" begin="-2.1s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 7 -->
+    <g transform="translate(290,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="7.4s" begin="-0.3s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 8 -->
+    <g transform="translate(330,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="6.1s" begin="-1.1s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 9 -->
+    <g transform="translate(370,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="6.8s" begin="-1.7s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 10 -->
+    <g transform="translate(410,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="7.2s" begin="-2.4s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 11 -->
+    <g transform="translate(450,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="5.9s" begin="-0.4s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 12 -->
+    <g transform="translate(490,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="6.7s" begin="-1.0s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 13 -->
+    <g transform="translate(530,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="7.5s" begin="-1.6s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 14 -->
+    <g transform="translate(570,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="6.4s" begin="-2.2s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 15 -->
+    <g transform="translate(610,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="7.1s" begin="-0.7s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 16 -->
+    <g transform="translate(650,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="6.0s" begin="-1.3s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 17 -->
+    <g transform="translate(690,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="7.3s" begin="-1.9s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 18 -->
+    <g transform="translate(730,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="6.2s" begin="-2.6s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 19 -->
+    <g transform="translate(770,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="7.0s" begin="-0.2s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 20 -->
+    <g transform="translate(810,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="6.6s" begin="-0.8s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 21 -->
+    <g transform="translate(850,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="7.6s" begin="-1.4s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 22 -->
+    <g transform="translate(890,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="5.8s" begin="-2.0s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 23 -->
+    <g transform="translate(930,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="6.9s" begin="-2.7s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 24 -->
+    <g transform="translate(970,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="6.3s" begin="-0.5s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 25 -->
+    <g transform="translate(1010,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="7.4s" begin="-1.1s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 26 -->
+    <g transform="translate(1050,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="6.1s" begin="-1.7s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 27 -->
+    <g transform="translate(1090,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="6.8s" begin="-2.3s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 28 -->
+    <g transform="translate(1130,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="7.2s" begin="-2.9s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- sütun 29 -->
+    <g transform="translate(1170,0)">
+      <g transform="translate(0,-340)">
+        <use href="#digits"/>
+        <animateTransform attributeName="transform" type="translate" values="0,-340;0,340" dur="5.9s" begin="-1.8s" repeatCount="indefinite"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ÜSTTE SABİT BAŞLIK -->
+  <g filter="url(#glow)">
+    <text x="120" y="160" fill="#39d353"
+          font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
+          font-size="84" font-weight="800" letter-spacing="2">SERHAT CAN</text>
+    <text x="120" y="210" fill="#2dd36f"
+          font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
+          font-size="34" font-weight="700" letter-spacing="1.5">OYUN &amp; UYGULAMA GELİŞTİRİCİSİ</text>
+  </g>
+</svg>
