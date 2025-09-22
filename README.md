@@ -20,32 +20,26 @@
 
 ## 🛠️ Tech Stack
 <!-- Animated tech stack grid -->
-<p align="center">
-  <!-- 1. sıra -->
-  <img src="https://techstack-generator.vercel.app/python-icon.svg" alt="Python" width="65" height="65" />
-  <img src="https://techstack-generator.vercel.app/php-icon.svg" alt="PHP" width="65" height="65" />
-  <img src="https://techstack-generator.vercel.app/html5-icon.svg" alt="HTML5" width="65" height="65" />
-  <img src="https://techstack-generator.vercel.app/css3-icon.svg" alt="CSS3" width="65" height="65" />
-  <img src="https://techstack-generator.vercel.app/js-icon.svg" alt="JavaScript" width="65" height="65" />
-  <img src="https://techstack-generator.vercel.app/csharp-icon.svg" alt="C#" width="65" height="65" />
-  <img src="https://techstack-generator.vercel.app/mysql-icon.svg" alt="MySQL" width="65" height="65" />
-</p>
+<!-- 1. sıra -->
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" width="65" height="65" />
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="PHP" width="65" height="65" />
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML5" width="65" height="65" />
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS3" width="65" height="65" />
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="65" height="65" />
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="C#" width="65" height="65" />
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="MySQL" width="65" height="65" />
 
-<p align="center">
-  <!-- 2. sıra -->
-  <img src="https://techstack-generator.vercel.app/reactjs-icon.svg" alt="React / React Native" width="65" height="65" />
-  <!-- Expo (animated yok) -->
-  <img src="https://cdn.simpleicons.org/expo/000000" alt="Expo" width="60" height="60" />
-  <img src="https://techstack-generator.vercel.app/figma-icon.svg" alt="Figma" width="65" height="65" />
-  <img src="https://techstack-generator.vercel.app/photoshop-icon.svg" alt="Photoshop" width="65" height="65" />
-  <img src="https://techstack-generator.vercel.app/linux-icon.svg" alt="Linux" width="65" height="65" />
-  <!-- ParrotOS (animated yok) -->
-  <img src="https://cdn.simpleicons.org/parrotsecurity/15E0FF" alt="ParrotOS" width="60" height="60" />
-  <!-- BlackArch (animated yok, Arch simgesi ile) -->
-  <img src="https://cdn.simpleicons.org/archlinux/1793D1" alt="BlackArch (Arch tabanlı)" width="60" height="60" />
-  <img src="https://techstack-generator.vercel.app/unity-icon.svg" alt="Unity" width="65" height="65" />
-  <img src="https://techstack-generator.vercel.app/git-icon.svg" alt="Git" width="65" height="65" />
-</p>
+<!-- 2. sıra -->
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React / React Native" width="65" height="65" />
+<img src="https://cdn.simpleicons.org/expo/000000" alt="Expo" width="60" height="60" />
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" alt="Figma" width="65" height="65" />
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-plain.svg" alt="Photoshop" width="65" height="65" />
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" width="65" height="65" />
+<img src="https://cdn.simpleicons.org/parrotsecurity/15E0FF" alt="ParrotOS" width="60" height="60" />
+<img src="https://cdn.simpleicons.org/archlinux/1793D1" alt="BlackArch (Arch tabanlı)" width="60" height="60" />
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/unity/unity-original.svg" alt="Unity" width="65" height="65" />
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git" width="65" height="65" />
+
 
 ---
 
