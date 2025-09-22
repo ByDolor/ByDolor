@@ -9,5 +9,5 @@
 ### 📊 GitHub İstatistiklerim
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ByDolor&show_icons=true&theme=radical)
 
-### 🐍 Snake Oyunu
+
 ![snake](https://raw.githubusercontent.com/ByDolor/ByDolor/output/snake.svg)
