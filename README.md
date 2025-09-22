@@ -37,14 +37,14 @@
 
 ---
 
-## 🐍 Snake Oyunu
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/ByDolor/ByDolor/output/snake.svg" alt="Snake Animation" />
 </p>
 
 ---
 
-## 🌐 Sosyal Bağlantılarım
+##  Sosyal Bağlantılarım
 <p align="center">
   <a href="https://instagram.com/_canserhat44">
     <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white" />
